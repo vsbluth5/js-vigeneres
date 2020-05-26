@@ -29,15 +29,14 @@ encryptBtn.addEventListener("click", e => {
   // Get the message from the messageArea
   let msg = messageArea.value;
   if (msg == "") {
-    msg = `You didn't enter a message to encrypt, 
-          so this is your current message. 
-            Delete this then type in a new message 
+    msg = `You didn't enter a message to encrypt, so this is your current message. Delete this then type in a new message 
               and click Encode again for another try.`;
     messageArea.value = msg;
   }
+  msg = msg.toUpperCase();
   // Get the key from keyInput
   encryption.innerHTML = `<p>Your encoded message is:</p>`;
-  const theKey = keyInput.value;
+  const theKey = keyInput.value.toUpperCase();
   let posKey = 0
   let cipher = ""
   // let msgList = msg.split()
