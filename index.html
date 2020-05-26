@@ -16,26 +16,25 @@
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
+    <label for="basic-url">Place the message you want to encrypt below</label>
     <div class="input-group large input-group-lg">
+      <textarea
+        class="form-control"
+        aria-label="With textarea"
+        placeholder="MESSAGE"
+      ></textarea>
+    </div>
+    <div class="input-group">
       <div class="input-group-prepend">
         <span class="input-group-text" id="secret">Your secret key:</span>
       </div>
       <input type="text" class="form-control" placeholder="PASSWORD" />
-      <p>
-      
-      </p>
-  
-
-    <label for="basic-url">Place the message you want to encrypt below</label>
-      <p>
-      
-      </p>
-
-      <textarea class="form-control" aria-label="With textarea" placeholder="MESSAGE"></textarea>
-
       <div class="input-group-append">
         <button class="btn btn-outline-secondary" type="button">Encode</button>
       </div>
+    </div>
+    <div id="encryption">
+      This is where the results will go
     </div>
 
     <!-- import the webpage's javascript file -->
