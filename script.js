@@ -27,7 +27,7 @@ encryptBtn.addEventListener("click", e => {
   // console.log(keyInput.value);
 
   // Get the message from the messageArea
-  const msg = messageArea.value;
+  let msg = messageArea.value;
   if (msg == "") {
     msg = `You didn't enter a message to encrypt, 
           so this is your current message. 
@@ -39,10 +39,11 @@ encryptBtn.addEventListener("click", e => {
   // encryption.innerHTML += `<p>The key is ${keyInput.value}</p>`;
   const theKey = keyInput.value;
   let posKey = 0
-  msg.forEach(()=>{
-    let pos = alphabet.indexOf(theKe[posKey%theKey.length])
-    encryption.inerHTML += `${symbol} is at position ${pos}`
-    posKey++;
+  let msgList = msg.split()
+  msgList.forEach((symbol)=>{
+    let pos = alphabet.indexOf(theKey[posKey])
+    encryption.innerHTML += `${symbol} in message corresponds to ${theKey[posKey]} which is at position ${pos}`
+    posKey = (posKey + 1)%theKey.length;
   })
   
   // for every character in the message
