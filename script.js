@@ -15,14 +15,13 @@ const encryption = document.querySelector("#encryption")
 
 encryptBtn.addEventListener("click", (e)=>{
   // console.log("Encode blicked")
-  encryption.innerHTML = `Encode has been clicked`
+  encryption.innerHTML = `Encode has been clicked\n`
+  console.log(messageArea.value)
+  encryption.innerHTML += `The message is ${messageArea.value}\n`
+  console.log(keyInput.value)
   // Get the message from the messageArea
-  encryption.innerHTML += `The message is: ${messageArea.value}`
+  
   // Get the key from keyInput
   encryption.innerHTML += `The key is ${keyInput.value}`
-  
-  
-  
-  encryption.innerHTML = `Encode has been clicked`
   
 })
