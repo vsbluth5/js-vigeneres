@@ -5,13 +5,18 @@
 console.log("hi");
 
 const messageArea = document.querySelector("textarea");
-console.log(messageArea);
+// console.log(messageArea);
 const encryptBtn = document.querySelector("button");
 // console.log(encryptBtn)
 const keyInput = document.querySelector("input");
-console.log(keyInput);
+// console.log(keyInput);
 const encryption = document.querySelector("#encryption");
 // console.log(encryption)
+let alphabet = ["A", "B", "C", "D", "E", "F", "H",
+               "I", "J", "K", "L", "M", "N", "O", 
+                "P", "Q", "R", "S", "T", "U", "V",
+               "X", "Y", "Z"
+               ]; // Might want to add other characters later
 
 encryptBtn.addEventListener("click", e => {
   // console.log("Encode blicked")
@@ -34,4 +39,8 @@ encryptBtn.addEventListener("click", e => {
   // encryption.innerHTML += `<p>The key is ${keyInput.value}</p>`;
   const theKey = keyInput.value;
   
+  // for every character in the message
+  
+  // for (let i=0; i < msg.length; i++){
+    
 });
