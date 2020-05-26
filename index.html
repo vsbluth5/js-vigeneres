@@ -17,17 +17,19 @@
   </head>
   <body>
     <label for="basic-url">Place the message you want to encrypt below</label>
-    <div class="input-group large input-group-lg">
+    <div class="input-group m-3 input-group-lg">
       <textarea
         class="form-control"
         aria-label="With textarea"
         placeholder="MESSAGE"
       ></textarea>
     </div>
-    
-    <div class="input-group mb-3">
-      <span class="input-group-text">$</span>
-    <span class="input-group-text">The Key: </span>
+
+    <div class="input-group m-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">The Key: </span>
+      </div>
+      <div
       <input
         type="text"
         class="form-control"
@@ -39,7 +41,7 @@
         <button class="btn btn-outline-secondary" type="button"></button>
       </div>
     </div>
-    
+
     <div id="encryption">
       This is where the results will go
     </div>
