@@ -39,15 +39,15 @@ encryptBtn.addEventListener("click", e => {
   // encryption.innerHTML += `<p>The key is ${keyInput.value}</p>`;
   const theKey = keyInput.value;
   let posKey = 0
-  let msgList = msg.split()
-  msgList.forEach((symbol)=>{
+  // let msgList = msg.split()
+  // console.log()
+  
+    // for every character in the message
+  for (let i = 0; i < msg.length; i++) {
     let pos = alphabet.indexOf(theKey[posKey])
-    encryption.innerHTML += `${symbol} in message corresponds to ${theKey[posKey]} which is at position ${pos}`
+    encryption.innerHTML += `${msg[i]} in message corresponds to ${theKey[posKey]} which is at position ${pos}`
     posKey = (posKey + 1)%theKey.length;
-  })
-  
-  // for every character in the message
-  
-  // for (let i=0; i < msg.length; i++){
+  }
+
     
 });
