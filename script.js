@@ -45,7 +45,9 @@ encryptBtn.addEventListener("click", e => {
     // for every character in the message
   for (let i = 0; i < msg.length; i++) {
     let pos = alphabet.indexOf(theKey[posKey])
-    encryption.innerHTML += `${msg[i]} in message corresponds to ${theKey[posKey]} which is at position ${pos}`
+    const shifted = alphabet.slice(posKey).concat(alphabet.slice(0, posKey))
+    console.log(shifted)
+    // encryption.innerHTML += `${msg[i]} in message corresponds to ${theKey[posKey]} which is at position ${pos}`
     posKey = (posKey + 1)%theKey.length;
   }
 
