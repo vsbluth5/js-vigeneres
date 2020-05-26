@@ -24,15 +24,22 @@
         placeholder="MESSAGE"
       ></textarea>
     </div>
-    <div class="input-group">
-      <div class="input-group-prepend">
-        <span class="input-group-text" id="secret">Your secret key:</span>
-      </div>
-      <input type="text" class="form-control" placeholder="PASSWORD" />
+    
+    <div class="input-group mb-3">
+      <span class="input-group-text">$</span>
+    <span class="input-group-text">The Key: </span>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="KEY"
+        aria-label="the_key"
+        aria-describedby="basic-addon2"
+      />
       <div class="input-group-append">
-        <button class="btn btn-outline-secondary" type="button">Encode</button>
+        <button class="btn btn-outline-secondary" type="button"></button>
       </div>
     </div>
+    
     <div id="encryption">
       This is where the results will go
     </div>
