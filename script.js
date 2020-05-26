@@ -38,6 +38,12 @@ encryptBtn.addEventListener("click", e => {
   // Get the key from keyInput
   // encryption.innerHTML += `<p>The key is ${keyInput.value}</p>`;
   const theKey = keyInput.value;
+  let posKey = 0
+  msg.forEach(()=>{
+    let pos = alphabet.indexOf(theKe[posKey%theKey.length])
+    encryption.inerHTML += `${symbol} is at position ${pos}`
+    posKey++;
+  })
   
   // for every character in the message
   
