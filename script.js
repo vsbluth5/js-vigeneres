@@ -12,10 +12,10 @@ const keyInput = document.querySelector("input");
 // console.log(keyInput);
 const encryption = document.querySelector("#encryption");
 // console.log(encryption)
-let alphabet = ["A", "B", "C", "D", "E", "F", "H",
+let alphabet = ["A", "B", "C", "D", "E", "F", "G", "H",
                "I", "J", "K", "L", "M", "N", "O", 
                 "P", "Q", "R", "S", "T", "U", "V",
-               "X", "Y", "Z"
+               "W", "X", "Y", "Z"
                ]; // Might want to add other characters later
 
 encryptBtn.addEventListener("click", e => {
@@ -45,9 +45,9 @@ encryptBtn.addEventListener("click", e => {
     // for every character in the message
   for (let i = 0; i < msg.length; i++) {
     let pos = alphabet.indexOf(theKey[posKey])
-    const shifted = alphabet.slice(posKey).concat(alphabet.slice(0, posKey))
+    const shifted = alphabet.slice(pos).concat(alphabet.slice(0, pos))
     console.log(shifted)
-    // encryption.innerHTML += `${msg[i]} in message corresponds to ${theKey[posKey]} which is at position ${pos}`
+    encryption.innerHTML += `<p>${msg[i]} and ${theKey[posKey]} => ${shifted[alphabet.indexOf(msg[i])]}</p>`
     posKey = (posKey + 1)%theKey.length;
   }
 
