@@ -5,11 +5,11 @@
 console.log("hi");
 
 const messageArea = document.querySelector("textarea")
-// console.log(messageArea)
+console.log(messageArea)
 const encryptBtn= document.querySelector("button")
 // console.log(encryptBtn)
 const keyInput = document.querySelector("input")
-// console.log(keyInput)
+console.log(keyInput)
 const encryption = document.querySelector("#encryption")
 // console.log(encryption)
 
@@ -17,9 +17,9 @@ encryptBtn.addEventListener("click", (e)=>{
   // console.log("Encode blicked")
   encryption.innerHTML = `Encode has been clicked`
   // Get the message from the messageArea
-  encryption.innerHTML += `${messageArea.}`
+  encryption.innerHTML += `The message is: ${messageArea.value}`
   // Get the key from keyInput
-  encryption.innerHTML += `Encode has been clicked`
+  encryption.innerHTML += `The key is ${keyInput.value}`
   
   
   
