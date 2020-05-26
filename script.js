@@ -3,3 +3,10 @@
 
 // prints "hi" in the browser's dev tools console
 console.log("hi");
+
+const message = document.querySelector("text-area")
+console.log(message)
+const key = document.querySelector("text-a")
+console.log(message)
+const key = document.querySelector("input")
+console.log(key)

@@ -16,29 +16,30 @@
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <label for="basic-url">Place the message you want to encrypt below</label>
+    <label for="message">Place the message you want to encrypt below</label>
     <div class="input-group m-3 input-group-lg">
       <textarea
         class="form-control"
-        aria-label="With textarea"
+        aria-label="message"
         placeholder="MESSAGE"
       ></textarea>
     </div>
 
-    <div class="input-group m-3">
-      <div class="input-group-prepend">
-        <span class="input-group-text">The Key: </span>
+    <label for="the-key">Type in the key, and then click Encode</label>
+    <div class="input-group m-3 nput-group-prepend">
+      <span class="input-group-text">The Key: </span>
+      <div class="input-group-sm">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="KEY"
+          aria-label="the-key"
+          aria-describedby="basic-addon2"
+        />
       </div>
-      <div
-      <input
-        type="text"
-        class="form-control"
-        placeholder="KEY"
-        aria-label="the_key"
-        aria-describedby="basic-addon2"
-      />
-      <div class="input-group-append">
-        <button class="btn btn-outline-secondary" type="button"></button>
+
+      <div class="input-group-append input-group-lg">
+        <button class="btn btn-outline-secondary" type="button">Encode</button>
       </div>
     </div>
 
