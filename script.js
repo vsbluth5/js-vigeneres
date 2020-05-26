@@ -36,20 +36,28 @@ encryptBtn.addEventListener("click", e => {
     messageArea.value = msg;
   }
   // Get the key from keyInput
-  // encryption.innerHTML += `<p>The key is ${keyInput.value}</p>`;
+  encryption.innerHTML = `<p>Your encoded message is:</p>`;
   const theKey = keyInput.value;
   let posKey = 0
+  let cipher = ""
   // let msgList = msg.split()
   // console.log()
   
     // for every character in the message
   for (let i = 0; i < msg.length; i++) {
-    let pos = alphabet.indexOf(theKey[posKey])
-    const shifted = alphabet.slice(pos).concat(alphabet.slice(0, pos))
-    console.log(shifted)
-    encryption.innerHTML += `<p>${msg[i]} and ${theKey[posKey]} => ${shifted[alphabet.indexOf(msg[i])]}</p>`
-    posKey = (posKey + 1)%theKey.length;
+    if (alphabet.includes(msg[i])) {
+      let pos = alphabet.indexOf(theKey[posKey])
+      const shifted = alphabet.slice(pos).concat(alphabet.slice(0, pos))
+      
+      // console.log(shifted)
+      // encryption.innerHTML += `<p>${msg[i]} and ${theKey[posKey]} => ${shifted[alphabet.indexOf(msg[i])]}</p>`
+      cipher += shifted[alphabet.indexOf(msg[i])]
+      posKey = (posKey + 1)%theKey.length;
+    } else {
+      cipher += msg[i]
+    }
   }
+  encryption.innerHTML += `${cipher}`
 
     
 });
